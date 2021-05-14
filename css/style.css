@@ -347,3 +347,54 @@ p {
     cursor: pointer;
     max-width: 150px;
 }
+@media (max-width: 1060px) {
+    .banner .imgSidebar {
+        display: none;
+    }
+    .banner .contentBx, .sidebar {
+        width: 100%;
+        padding: 40px;
+    }
+    .logoText {
+        left: 40px;
+    }
+    .toggle {
+        right: 40px;
+    }
+    .sci {
+        left: 40px;
+    }
+    section {
+        padding: 40px;
+    }
+    .about .content{
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .about .content .textBx {
+        min-width: 100%;
+        width: 100%;
+    }
+    .about .content .imgBx {
+        margin-left: 0;
+        height: 50%;
+        width: 50%;
+        transform: translateX(35%);
+    }
+    .services .content .serviceBx {
+        padding: 30px 20px;
+        max-width: 340px;
+        margin: 10px;
+    }
+    .contact .contactForm {
+        width: 100%;
+    }
+    .contactForm .row {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .contact .contactForm .row .col50 {
+        width: 100%;
+    }
+}
