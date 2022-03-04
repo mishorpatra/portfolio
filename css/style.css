@@ -425,4 +425,10 @@ p {
         width: 100%;
         margin: 10px 0;
     }
+    .contactForm input {
+        max-width: 100%;
+    }
+    .contactForm textarea {
+        max-width: 100%;
+    }
 }
