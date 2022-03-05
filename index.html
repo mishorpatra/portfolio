@@ -136,7 +136,7 @@
     <script>
         //apis are defineed here
 
-        const URL = 'https://myportfolio-b78d2-default-rtdb.firebaseio.com/clientData.json' 
+        const URL = DB_URL_SECURE 
         const postDetails = async (post) => {
             try {
                 return await axios.post(`${URL}`, post)
