@@ -136,7 +136,7 @@
     <script>
         //apis are defineed here
 
-        const URL = DB_URL_SECURE 
+        const URL = process.env.DB_URL_SECURE 
         const postDetails = async (post) => {
             try {
                 return await axios.post(`${URL}`, post)
