@@ -22,9 +22,9 @@
         <div>
             <h4><span>Hello</span>, I'm</h4>
             <h2>Mishor Patra</h2>
-            <h4>I'm a Web Developer from Kolkata.</h4>
+            <h4>I'm a Software Developer from Kolkata.</h4>
             <p> I enjoy building everything from small business sites to rich interactive web apps. If you are a business seeking, a web presence or an employer looking to hire, you can get touch with me here. <br><br>
-            I have a diverse set of skills ranging from design to HTML, CSS and javascript all the way to Node.js, MongoDb, React and Express.
+            I have a diverse set of skills ranging from design to HTML, CSS and javascript all the way to Node.js, MongoDb, React, React Native and Express.
             </p>
             <a href="#home" class="btn">About Me</a>
         </div>
@@ -38,7 +38,7 @@
     <section class="services" id="services">
         <div class="title">
             <h3>Our Services</h3>
-            <p>We offer various kind of services that will help you grow your startup, YouTube channel or social media handles.</p>
+            <p>We offer various kind of services that will help you to grow your startup, YouTube channels or social media handles.</p>
         </div>
         <div class="content">
             <div class="serviceBx">
@@ -46,17 +46,18 @@
                 <h2>Web Design</h2>
                 <p>Spread your businesses on internet using the fast, flexible, beautiful and responsive websites.</p>
             </div>
+            <div class="serviceBx">
+                <img src="Assets/icon2.png" alt="">
+                <h2>Web Developement</h2>
+                <p>Get secure sites with lots of features. We will handle the huge hurdles of databases for you.</p>
+            </div>
+            <div class="serviceBx">
+                <img src="Assets/icon3.png" alt="">
+                <h2>App Developement</h2>
+                <p>Publish your apps for android as well as for ios. </p>
+            </div>
             
-            <div class="serviceBx">
-                <img src="Assets/icon5.png" alt="">
-                <h2>Content Writing</h2>
-                <p>Get the exact thing you want. Leave the creativity to us.</p>
-            </div>
-            <div class="serviceBx">
-                <img src="Assets/icon6.png" alt="">
-                <h2>Video Editing</h2>
-                <p>Merge, green screen effects, transitions, subtitles, adding external audio or anything that makes your creativity looks eye catching, we can do it for you. So no more hardles.</p>
-            </div>
+            
         </div>
     </section>
     <section class="work" id="work">
@@ -141,13 +142,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <script>
         //apis are defineed here
 
         const URL = 'https://myportfolio-b78d2-default-rtdb.firebaseio.com/clientData.json' 
+        const sendMail = 'https://regionofknowledge.herokuapp.com/users/portfolio'
         const postDetails = async (post) => {
             try {
-                return await axios.post(`${URL}`, post)
+                await axios.post(`${URL}`, post)
+                return await axios.post(sendMail, post)
             } catch(error) {
                 console.log('Error while posting Client Details')
             }
